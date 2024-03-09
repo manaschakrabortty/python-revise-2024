@@ -51,3 +51,59 @@
 # print(new_data)
 # with open("practice.txt","w") as f:
 #     f.write(new_data)
+
+
+#SEARCH IF THE WORD "learning" exists in the file or not?
+# word="LEARNING"
+# with open("practice.txt","r") as f:
+#     data= f.read()
+#     if (data.find(word) != -1):
+#         print("found")
+#     else:
+#         print("not found")
+#USING FUNCTION
+# def check_find():
+#     word="LEARNING"
+#     with open("practice.txt","r") as f:
+#         data= f.read()
+#         if (data.find(word) != -1):
+#             print("found")
+#         else:
+#             print("not found")
+# check_find()
+
+#WAF TO FIND IN WHICH LINE OF THE FILE DOES THE WORD "LEARNING" OCCUR FIRST
+#PRINT -1 IF WORD NOT FOUND
+# def check_find():
+#     word="LEARNING"
+#     with open("practice.txt","r") as f:
+#         data= f.read()
+#         if (data.find(word) != -1):
+#             print("found")
+#         else:
+#             print("not found")
+# check_find()
+# def check_found():
+#     word="LEARNING"
+#     data= True
+#     line_no = 1
+#     with open("practice.txt","r") as f:
+#         while data:
+#             data = f.readline()
+#             if(word in data):
+#                 print(line_no)
+#                 return
+#             line_no +=1
+# check_found()
+
+#FROM A FILE CONTAINING NUMBERS SEPARATED BY COMMA, PRINT THE COUNT OF EVEN NUMBERS
+count=0
+with open("practice.txt","r") as f:
+    data = f.read()
+    print(data)#1st individual number get 2nd parse/casting to int because it is string format
+
+    nums=data.split(",")
+    for val in nums:
+        if(int(val)%2 ==0):
+            count+=1
+print(count)
